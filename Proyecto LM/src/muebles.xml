@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dormitorio>
+
+	<muebles>
+	
+		<cama tipo="individual" tamaño="90x200cm"/>
+		<mesitaDeNoche tipo="comoda de dos cajones" tamaño="54x66cm"/>
+		<armario tipo="armario con 3 puertas" tamaño="120x60x191cm"/>
+		<alfombra tipo="alfombra de pelo largo" tamaño="170x240cm"/>
+		<iluminacion tipo="lamparas de techo" tamaño="20cm"/>
+	
+	</muebles>
+
+</dormitorio>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<pelicula nombre="Spider-Man Homecoming" duracion="2h 13min" genero="Sci-Fi">
+
+	<director>Jon Watts</director>
+	
+	<escritores>Jonathan Goldstein y John Francis Daley</escritores>
+	
+	<reparto>
+	
+		<personaje actor="Tom Holland">Spider-Man</personaje>
+		<personaje actor="Michael Keaton">Vulture</personaje>
+		<personaje actor="Robert Downey Jr.">Iron Man</personaje>
+		<personaje actor="Bokeem Woodbine">Shocker</personaje>
+		
+	
+	</reparto>
+
+</pelicula>

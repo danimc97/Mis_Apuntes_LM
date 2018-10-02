@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<factura>
+
+	<cliente direccion="Calle La Fuente">Francisco</cliente>
+	
+	<tecnico>Carlos</tecnico>
+	
+	<reparaciones>
+	
+		<reparacion1 precio="10€">Desmontar griferia</reparacion1>
+		<reparacion2 precio="20€">Arreglar desagüe</reparacion2>
+	
+	</reparaciones>
+	
+	<precioTotal>30€</precioTotal>
+
+</factura>

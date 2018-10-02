@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE placas SYSTEM "Ejercicio1.dtd">
+
+<placas>
+
+	<placaAsus>
+	
+		<microprocesador>CPU LGA1151 Intel Core</microprocesador>
+		<memoria>Intel Extreme Memory Profile (XMP)</memoria>
+		<modelo>TUF H370-PRO GAMING</modelo>
+		<fabricante><Asus/></fabricante>
+	
+	</placaAsus>
+
+	<placaIntel>
+	
+		<microprocesador>Intel Core/Pentium Gold/Celeron</microprocesador>
+		<memoria>4 DIMMs</memoria>
+		<modelo> MSI B360M Bazooka</modelo>
+		<fabricante><Intel/></fabricante>
+	
+	</placaIntel>
+
+</placas>

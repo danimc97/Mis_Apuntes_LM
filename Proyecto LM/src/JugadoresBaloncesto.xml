@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<equipo nombre="Lakers">
+
+	<plantilla>
+	
+		<jugador posicion="Guard" country="USA">Lonzo Ball</jugador>
+		<jugador posicion="Forward" country="USA">Michael Beasley</jugador>
+		<jugador posicion="Guard" country="USA">Joel Berry II</jugador>
+		<jugador posicion="Guard" country="Germany">Isaac Bonga</jugador>
+		<jugador posicion="Guard" country="USA">Kentavious Caldwell-Pope</jugador>
+		<jugador posicion="Forward" country="USA">Jeffrey Carroll</jugador>
+		<jugador posicion="Guard" country="USA">Alex Caruso</jugador>
+		<jugador posicion="Guard" country="USA">Josh Hart</jugador>
+		<jugador posicion="Guard" country="USA">Andre Ingram</jugador>
+		<jugador posicion="Forward-Guard" country="USA">Brandom Ingram</jugador>
+		<jugador posicion="Guard" country="USA">Lonzo Ball</jugador>
+		
+	</plantilla>
+
+</equipo>

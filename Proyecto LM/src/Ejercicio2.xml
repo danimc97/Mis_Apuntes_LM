@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE correo [
+<!ELEMENT correo (destinatario, asunto, cuerpoDelMensaje, archivoAdjunto?)>
+<!ELEMENT destinatario (para*,cc*,cco*)>
+<!ELEMENT asunto (#PCDATA)>
+<!ELEMENT cuerpoDelMensaje (#PCDATA)>
+<!ELEMENT archivoAdjunto (nombre,mimeType,longitud)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nimeType (#PCDATA)>
+<!ELEMENT longitud (#PCDATA)>
+<!ELEMENT para (#PCDATA)>
+<!ELEMENT cc (#PCDATA)>
+<!ELEMENT cco (#PCDATA)>
+]>
+
+
+
+<correo>
+
+	<destinatario>
+	
+		<para></para>
+	
+	</destinatario>
+	
+	
+	<asunto></asunto>
+	
+	<cuerpoDelMensaje></cuerpoDelMensaje>
+	<archivoAdjunto>
+		
+			<nombre></nombre>
+			<mimeType></mimeType>
+			<longitud></longitud>
+		
+	</archivoAdjunto>
+	
+
+</correo>
