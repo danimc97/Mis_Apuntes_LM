@@ -3,36 +3,38 @@
 
 	<!ELEMENT vengadores (vengador*,trajes)>
 	<!ELEMENT vengador (poder, equipo, arma)>
-	<!ELEMENT trajes (traje*)>
+	<!ELEMENT trajes (traje+)>
 	<!ELEMENT traje EMPTY>
 	<!ELEMENT poder EMPTY>
 	<!ELEMENT arma EMPTY>
 	<!ELEMENT traduccion EMPTY>
 	<!ELEMENT equipo (#PCDATA | traduccion)*>
 	<!ATTLIST vengador nombre CDATA #REQUIRED referencia ID #REQUIRED compañia CDATA #IMPLIED>
-	<!ATTLIST poder tipo CDATA #IMPLIED>
-	<!ATTLIST equipo nombre CDATA #IMPLIED>
+	%poderHeroe;
+	<!ATTLIST equipo nombre CDATA #FIXED "AVENGERS">
 	<!ATTLIST arma tipo CDATA #IMPLIED>
 	<!ATTLIST traje propiedad IDREF #REQUIRED>
+	<!ENTITY LV "Los Vengadores">
+	<!ENTITY %poderHeroe "<!ATTLIST poder tipo CDATA #IMPLIED>">
 ]>
 
 <vengadores>
 
 	<vengador nombre="Spider Man" referencia="v1" compañia="Marvel">
 		<poder tipo="Reflejos Aracnidos" />
-		<equipo nombre="AVENGERS">Los Vengadores <traduccion/></equipo>
+		<equipo nombre="AVENGERS">&LV; <traduccion/></equipo>
 		<arma tipo="lanzaredes"/>
 	</vengador>
 	
 	<vengador nombre="Capitan America" referencia="v2" compañia="Marvel">
 		<poder tipo="Fuerza" />
-		<equipo nombre="AVENGERS">Los Vengadores <traduccion/></equipo>
+		<equipo nombre="AVENGERS">&LV;<traduccion/></equipo>
 		<arma tipo="Escudo"/>
 	</vengador>
 	
 	<vengador nombre="Iron Man" referencia="v3" compañia="Marvel">
 		<poder tipo="Armadura" />
-		<equipo nombre="AVENGERS">Los Vengadores <traduccion/></equipo>
+		<equipo nombre="AVENGERS">&LV; <traduccion/></equipo>
 		<arma tipo="Misiles"/>
 	</vengador>
 	
