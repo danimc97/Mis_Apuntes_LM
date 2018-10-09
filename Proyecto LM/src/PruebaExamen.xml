@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<DOCTYPE vengadores [
+<!DOCTYPE vengadores [
 
 	<!ELEMENT vengadores (vengador*,trajes)>
 	<!ELEMENT vengador (poder, equipo, arma)>
@@ -11,9 +11,9 @@
 	<!ELEMENT equipo (#PCDATA | traduccion)*>
 	<!ATTLIST vengador nombre CDATA #REQUIRED referencia ID #REQUIRED compañia CDATA #IMPLIED>
 	<!ATTLIST poder tipo CDATA #IMPLIED>
-	<!ATTLIST nombre CDATA #IMPLIED>
+	<!ATTLIST equipo nombre CDATA #IMPLIED>
 	<!ATTLIST arma tipo CDATA #IMPLIED>
-	<!ATTLIST
+	<!ATTLIST traje propiedad IDREF #REQUIRED>
 ]>
 
 <vengadores>
