@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DOCTYPE vengadores [
+
+	<!ELEMENT vengadores (vengador*,trajes)>
+	<!ELEMENT vengador (poder, equipo, arma)>
+	<!ELEMENT trajes (traje*)>
+	<!ELEMENT traje EMPTY>
+	<!ELEMENT poder EMPTY>
+	<!ELEMENT arma EMPTY>
+	<!ELEMENT traduccion EMPTY>
+	<!ELEMENT equipo (#PCDATA | traduccion)*>
+	<!ATTLIST vengador nombre CDATA #REQUIRED referencia ID #REQUIRED compañia CDATA #IMPLIED>
+	<!ATTLIST poder tipo CDATA #IMPLIED>
+	<!ATTLIST nombre CDATA #IMPLIED>
+	<!ATTLIST arma tipo CDATA #IMPLIED>
+	<!ATTLIST
+]>
+
+<vengadores>
+
+	<vengador nombre="Spider Man" referencia="v1" compañia="Marvel">
+		<poder tipo="Reflejos Aracnidos" />
+		<equipo nombre="AVENGERS">Los Vengadores <traduccion/></equipo>
+		<arma tipo="lanzaredes"/>
+	</vengador>
+	
+	<vengador nombre="Capitan America" referencia="v2" compañia="Marvel">
+		<poder tipo="Fuerza" />
+		<equipo nombre="AVENGERS">Los Vengadores <traduccion/></equipo>
+		<arma tipo="Escudo"/>
+	</vengador>
+	
+	<vengador nombre="Iron Man" referencia="v3" compañia="Marvel">
+		<poder tipo="Armadura" />
+		<equipo nombre="AVENGERS">Los Vengadores <traduccion/></equipo>
+		<arma tipo="Misiles"/>
+	</vengador>
+	
+	<trajes>
+		<traje propiedad="v1"/>
+		<traje propiedad="v2"/>
+		<traje propiedad="v3"/>
+	</trajes>
+	
+</vengadores>
