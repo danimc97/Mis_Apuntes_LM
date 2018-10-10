@@ -10,12 +10,12 @@
 	<!ELEMENT traduccion EMPTY>
 	<!ELEMENT equipo (#PCDATA | traduccion)*>
 	<!ATTLIST vengador nombre CDATA #REQUIRED referencia ID #REQUIRED compañia CDATA #IMPLIED>
-	%poderHeroe;
 	<!ATTLIST equipo nombre CDATA #FIXED "AVENGERS">
-	<!ATTLIST arma tipo CDATA #IMPLIED>
+	<!ATTLIST arma tipo (Lanzaredes | Escudo | Misiles) #IMPLIED>
 	<!ATTLIST traje propiedad IDREF #REQUIRED>
 	<!ENTITY LV "Los Vengadores">
-	<!ENTITY %poderHeroe "<!ATTLIST poder tipo CDATA #IMPLIED>">
+	<!ENTITY % poderHeroe "<!ATTLIST poder tipo CDATA #IMPLIED>">
+	%poderHeroe;
 ]>
 
 <vengadores>
@@ -23,7 +23,7 @@
 	<vengador nombre="Spider Man" referencia="v1" compañia="Marvel">
 		<poder tipo="Reflejos Aracnidos" />
 		<equipo nombre="AVENGERS">&LV; <traduccion/></equipo>
-		<arma tipo="lanzaredes"/>
+		<arma tipo="Lanzaredes"/>
 	</vengador>
 	
 	<vengador nombre="Capitan America" referencia="v2" compañia="Marvel">
