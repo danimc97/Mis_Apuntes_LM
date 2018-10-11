@@ -9,7 +9,11 @@
 	<!ELEMENT arma EMPTY>
 	<!ELEMENT traduccion EMPTY>
 	<!ELEMENT equipo (#PCDATA | traduccion)*>
-	<!ATTLIST vengador nombre CDATA #REQUIRED referencia ID #REQUIRED compañia CDATA #IMPLIED>
+	
+	<!ATTLIST vengador 	nombre CDATA #REQUIRED 
+						referencia ID #REQUIRED 
+						compañia CDATA #IMPLIED>
+						
 	<!ATTLIST equipo nombre CDATA #FIXED "AVENGERS">
 	<!ATTLIST arma tipo (Lanzaredes | Escudo | Misiles) #IMPLIED>
 	<!ATTLIST traje propiedad IDREF #REQUIRED>
