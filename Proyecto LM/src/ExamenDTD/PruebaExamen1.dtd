@@ -1,0 +1,25 @@
+<!ELEMENT tienda (peluches?, tazas?, cestas?, productos?)*>
+<!ELEMENT peluches (peluche+)>
+<!ELEMENT peluche (#PCDATA)>
+<!ELEMENT tazas (taza+)>
+<!ELEMENT taza (#PCDATA | personaje)*>
+<!ELEMENT personaje EMPTY>
+<!ELEMENT cestas (cesta)>
+<!ELEMENT cesta (#PCDATA)>
+<!ELEMENT productos (producto+)>
+<!ELEMENT producto EMPTY>
+
+<!ATTLIST peluche %product;>					
+<!ATTLIST taza 	%product;>
+					
+<!ATTLIST cesta precio (15 | 13 | 10 | 20) #REQUIRED referencia IDREFS #REQUIRED nombre CDATA #IMPLIED>
+<!ATTLIST personaje nombre CDATA #IMPLIED>
+
+<!ATTLIST producto 	tipo ID #REQUIRED>
+
+<!ENTITY taza "taza">
+<!ENTITY peluche "peluche">
+
+<!ENTITY % product "precio (15 | 13 | 10 | 20) #REQUIRED referencia IDREF #REQUIRED nombre CDATA #IMPLIED">
+
+

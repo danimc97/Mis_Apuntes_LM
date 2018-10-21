@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE tienda SYSTEM "PruebaExamen1.dtd">
+
+<tienda>
+	<peluches>
+		<peluche precio="15" referencia="peluche" nombre="Oso">Oso de &peluche;</peluche>
+		<peluche precio="13" referencia="peluche" nombre="Caballo">Caballo de &peluche;</peluche>
+	</peluches>
+	
+	<tazas>
+		<taza precio="10" referencia="taza" nombre="Futurama">&taza;de Futurama <personaje nombre="Bender"/></taza>
+		<taza precio="10" referencia="taza" nombre="Batman">&taza; de Batman <personaje nombre="joker"/></taza>
+	</tazas>
+	
+	<cestas>
+	
+		<cesta precio="20" referencia="taza peluche" nombre="CestaRegalo">Cesta con un &peluche; y una &taza;</cesta>
+	
+	</cestas>
+	
+	<productos>
+		<producto tipo="peluche"/>
+		<producto tipo="taza"/>
+	</productos>
+</tienda>
+

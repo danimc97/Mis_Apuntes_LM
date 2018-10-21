@@ -49,3 +49,7 @@
 	</trajes>
 	
 </vengadores>
+
+<!ENTITY % tipos "tipo CDATA">
+<ATTLIST poder %tipos;>
+<ATTLIST arma %tipos;>
