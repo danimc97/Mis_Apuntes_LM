@@ -8,7 +8,7 @@
 <!ELEMENT cesta (#PCDATA)>
 <!ELEMENT productos (producto+)>
 <!ELEMENT producto EMPTY>
-
+<!ENTITY % product "precio (15 | 13 | 10 | 20) #REQUIRED referencia IDREF #REQUIRED nombre CDATA #IMPLIED">
 <!ATTLIST peluche %product;>					
 <!ATTLIST taza 	%product;>
 					
@@ -20,6 +20,6 @@
 <!ENTITY taza "taza">
 <!ENTITY peluche "peluche">
 
-<!ENTITY % product "precio (15 | 13 | 10 | 20) #REQUIRED referencia IDREF #REQUIRED nombre CDATA #IMPLIED">
+
 
 
