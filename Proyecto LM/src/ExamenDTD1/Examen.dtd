@@ -1,0 +1,24 @@
+<!ELEMENT pelicula (titulo, sinopsis, reparto, personajes+)>
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT sinopsis (#PCDATA)>
+<!ELEMENT reparto (actor?, actriz?)*>
+<!ELEMENT actor (#PCDATA | papel)*>
+<!ELEMENT actriz (#PCDATA | papel)*>
+<!ELEMENT papel EMPTY>
+<!ELEMENT personajes (personaje*)>
+<!ELEMENT personaje EMPTY>
+
+<!ENTITY % propiedades "interpreta_a CDATA #REQUIRED
+				edad CDATA #FIXED "19"
+				pais CDATA #REQUIRED">
+
+<!ATTLIST actor %propiedades;>
+				
+<!ATTLIST actriz %propiedades;>
+				
+<!ATTLIST papel tipo IDREF #REQUIRED>
+
+<!ATTLIST personaje importancia ID #REQUIRED>
+
+<!ENTITY SM "Spider-Man">
+

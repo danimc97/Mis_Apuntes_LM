@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE pelicula SYSTEM "Examen.dtd">
+
+<pelicula>
+
+	<titulo>&SM; Homecoming</titulo>
+	
+	<sinopsis>Un tio que le pica una araña y ala tiene poderes guapos</sinopsis>
+	
+	<reparto>
+	
+		<actor interpreta_a="Spider-Man" edad="19" pais="USA">Tom Holland<papel tipo="primario"/></actor>
+		<actriz interpreta_a="Michelle" edad="19" pais="USA">Zendaya<papel tipo="secundario"/></actriz>
+		<actriz interpreta_a="Liz" edad="19" pais="USA">Laura Harrier<papel tipo="primario"/></actriz>
+	
+	</reparto>
+	
+	<personajes>
+	
+		<personaje importancia="primario"/>
+		<personaje importancia="secundario"/>
+	
+	</personajes>
+
+</pelicula>
