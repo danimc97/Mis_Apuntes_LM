@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="serie" type="TipoSerie"/>
+	
+	<xs:complexType name="TipoSerie">
+		<xs:sequence>
+			<xs:element name="nombre" type="xs:string"></xs:element>
+			<xs:element name="creador" type="tipoCreador"></xs:element>
+			<xs:element name="genero" type="tipoGenero"></xs:element>
+			<xs:element name="año" type="tipoAño"></xs:element>
+			<xs:element name="sinopsis" type="xs:string"></xs:element>
+			<xs:element name="reparto" type="listaReparto"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="listaReparto" mixed="true">
+		<xs:sequence>
+			<xs:element name="personaje" type="Personajes" maxOccurs="unbounded"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	
+	<xs:complexType name="tipoAño">
+      <xs:simpleContent>
+        <xs:extension base="xs:integer">
+          <xs:attribute name="siglo" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+	
+	<xs:complexType name="tipoGenero">
+		<xs:attribute name="tipo" type="xs:string"></xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoCreador" mixed="true">
+		<xs:attribute name="puesto" type="xs:string" use="optional"/>
+	</xs:complexType>
+	
+	
+	<xs:complexType name="Personajes" mixed="true">
+		<xs:attribute name="interpretadoPor" type="xs:string" use="optional"/>
+		<xs:attribute name="edad" type="xs:int" use="optional"/>
+		<xs:attribute name="importancia" type="listaImportancia" use="optional"/>
+	</xs:complexType>
+	
+	<xs:simpleType name="listaImportancia">
+		<xs:list itemType="lista1"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="lista1">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="Principal"></xs:pattern>
+			<xs:pattern value="Secundario"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>

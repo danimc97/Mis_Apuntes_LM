@@ -9,7 +9,7 @@
 <!ELEMENT personaje EMPTY>
 
 <!ENTITY % propiedades "interpreta_a CDATA #REQUIRED
-				edad CDATA #FIXED "19"
+				edad CDATA #FIXED '19'
 				pais CDATA #REQUIRED">
 
 <!ATTLIST actor %propiedades;>

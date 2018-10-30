@@ -1,0 +1,31 @@
+<!ELEMENT movil (accesorios, extras?, referencias)>
+<!ELEMENT accesorios (accesorio+)>
+<!ELEMENT accesorio (#PCDATA | id )*>
+<!ELEMENT id EMPTY>
+<!ELEMENT extras (accesorioExtra*, (accesoriosSorpresa | accesoriosSorpresa1)+)>
+<!ELEMENT accesorioExtra (#PCDATA)>
+<!ELEMENT accesoriosSorpresa (#PCDATA)>
+<!ELEMENT accesoriosSorpresa1 (#PCDATA)>
+<!ELEMENT referencias (referenciaAccesorio*)>
+<!ELEMENT referenciaAccesorio EMPTY>
+
+<!ENTITY CAR "Cargador">
+
+<!ENTITY % propiedades "referencia IDREF #REQUIRED
+					color (Negro | Blanco | Transparente) #IMPLIED">
+					
+<!ENTITY % propiedadesS "referencia IDREFS #REQUIRED
+					color (Negro | Blanco | Transparente) #IMPLIED">
+					
+<!ATTLIST id tipo CDATA #REQUIRED>
+
+<!ATTLIST accesorio %propiedades;>
+					
+<!ATTLIST accesorioExtra %propiedades;>
+							
+<!ATTLIST accesoriosSorpresa %propiedadesS;>
+							
+<!ATTLIST accesoriosSorpresa1 %propiedadesS;>
+							
+<!ATTLIST referenciaAccesorio 	tipo ID #REQUIRED
+								marca CDATA #FIXED "Samsung">

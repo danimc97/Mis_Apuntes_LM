@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE movil SYSTEM "ExamenDTD2018.dtd">
+
+<movil>
+
+	<accesorios>
+	
+		<accesorio  referencia="Carga" color="Negro">&CAR; de movil<id tipo="Codigo de barras"/></accesorio>
+		<accesorio  referencia="Sonido" color="Blanco">Auriculares<id tipo="Codigo de barras"/></accesorio>
+		<accesorio  referencia="Proteccion" color="Transparente">Protector de pantalla<id tipo="Codigo de barras"/></accesorio>
+	
+	</accesorios>
+	
+	<extras>
+	
+		<accesorioExtra referencia="Carga" color="Negro">&CAR; portatil</accesorioExtra>
+		<accesorioExtra referencia="Sonido" color="Negro">Auriculares</accesorioExtra>
+		<accesorioExtra referencia="Proteccion" color="Negro">Protector de pantalla</accesorioExtra>
+		<accesorioExtra referencia="Carga" color="Negro">&CAR; portatil</accesorioExtra>
+		<accesoriosSorpresa1 referencia="Proteccion Carga" color="Negro">Funda de movil y protector</accesoriosSorpresa1>
+		
+	</extras>
+	
+	
+	<referencias>
+		
+		<referenciaAccesorio tipo="Carga" marca="Samsung"/>
+		<referenciaAccesorio tipo="Sonido" marca="Samsung"/>
+		<referenciaAccesorio tipo="Proteccion" marca="Samsung"/>
+	
+	</referencias>
+
+</movil>

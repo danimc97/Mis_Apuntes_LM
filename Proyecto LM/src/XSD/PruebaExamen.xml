@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<serie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PruebaExamen.xsd">
+
+	<nombre>Esoy vivo</nombre>
+	
+	<creador puesto="Director">Javier Écija</creador>
+	
+	<genero tipo="comedia drama"/>
+	
+	<año siglo="21">2017</año>
+	
+	<sinopsis>Un policía asesinado vuelve a la vida en el cuerpo de otro agente del cuerpo. 
+	Mientras se adapta a su nueva situación, deberá investigar a su asesino y 
+	ocultar su verdadera identidad al mismo tiempo.</sinopsis>
+	
+	<reparto> Estos son los personajes de la serie:
+		<personaje interpretadoPor="Javier Gutierrez" edad="47" importancia="Principal">Manuel Marquez</personaje>
+		<personaje interpretadoPor="Alejo Sauras" edad="39" importancia="Secundario">El enlace</personaje>
+		<personaje interpretadoPor="Anna Castillo" edad="25" importancia="Principal">Susana Vargas</personaje>
+	</reparto>
+	
+	
+
+</serie>
