@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="simpson" type="tipoSimpsons"/>
+	
+	
+	<xs:complexType name="tipoSimpsons">
+		<xs:sequence>
+		
+			<xs:element name="localidad" type="tipoLocalidad"/>
+			<xs:element name="pelicula" type="tipoPelicula"/>
+			<xs:element name="creador" type="tipoCreador"/>
+			<xs:element name="familia" type="tipoFamilia"/>
+			<xs:element name="temporada" type="tipoTemporada"/>
+			<xs:element name="personajes" type="tipoPersonajes"/>
+			<xs:element name="colorPersonaje" type="tipoColor"/>
+			<xs:element name="MontgomeryBurns" type="tipoBurns"/>
+			<xs:element name="localidadRival" type="tipoRival"/>
+			<xs:element name="Barney" type="tipoBarney"/>
+			
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	
+	
+	
+	<xs:complexType name="tipoLocalidad">
+		<xs:attribute name="valor" type="xs:string"/>
+		<xs:attribute name="anyoFundacion" type="xs:integer"/>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoPelicula" mixed="true">
+		<xs:sequence>
+			<xs:element name="titulo" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoCreador" mixed="true">
+		<xs:attribute name="bso" type="xs:string"></xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoFamilia">
+		<xs:simpleContent>
+			<xs:extension base="xs:integer">
+				<xs:attribute name="nombre" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoTemporada">
+		<xs:choice>
+			<xs:element name="temporada01"/>
+			<xs:element name="temporada02"/>
+			<xs:element name="temporada03"/>
+		</xs:choice>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoPersonajes">
+		<xs:all>
+			<xs:element name="Homer" type="tipoVacio"/>
+			<xs:element name="Marge" type="tipoVacio"/>
+			<xs:element name="Bart" type="tipoVacio"/>
+			<xs:element name="Lisa" type="tipoVacio"/>
+			<xs:element name="Maggie" type="tipoVacio"/>
+		</xs:all>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoVacio"/>
+	
+	<xs:complexType name="tipoColor">
+		<xs:attribute name="principal" type="tipoColorLista"/>
+		<xs:attribute name="rojo" type="IntNumeros"/>
+		<xs:attribute name="verde" type="IntNumeros"/>
+		<xs:attribute name="azul" type="IntNumeros"/>
+	</xs:complexType>
+	
+	<xs:simpleType name="tipoColorLista">
+		<xs:list itemType="listaColor"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="listaColor">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="amarillo"></xs:pattern>
+			<xs:pattern value="carne"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="IntNumeros">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="100"></xs:minInclusive>
+			<xs:maxInclusive value="1000"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:complexType name="tipoBurns">
+		<xs:attribute name="dni" type="tipoDni"/>
+		<xs:attribute name="matricula" type="tipoMatricula"/>
+		<xs:attribute name="mac" type="tipoMac"/>
+		<xs:attribute name="color" type="tipoColorLista"/>
+	</xs:complexType>
+	
+	<xs:simpleType name="tipoDni">
+		<xs:restriction base="xs:string">
+			 <xs:pattern value="\d{8}[A-Z]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoMatricula">
+		<xs:restriction base="xs:string">
+			 <xs:pattern value="\d{4}\w{3}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoMac">
+		<xs:restriction base="xs:string">
+			 <xs:pattern value="([0-9|A-F|a-f]{2}:){5}[0-9|A-F|a-f]{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+  	<xs:simpleType name="tipoRival">
+    	<xs:union memberTypes="comunidadesEsp comunidadesUSA" />
+  	</xs:simpleType> 
+
+  	<xs:simpleType name="comunidadesEsp">
+    	<xs:restriction base="xs:string">
+	     <xs:enumeration value="Sevilla" />
+	     <xs:enumeration value="Malaga" />
+	     <xs:enumeration value="Cordoba" />
+	     <xs:enumeration value="Almeria" />
+    	</xs:restriction> 
+ 	</xs:simpleType>
+
+	 <xs:simpleType name="comunidadesUSA">
+	   <xs:restriction base="xs:string">
+	     <xs:enumeration value="Nueva York"/>
+	     <xs:enumeration value="Springfield"/>
+	     <xs:enumeration value="Toronto"/>
+	     <xs:enumeration value="Las vegas"/>
+	   </xs:restriction>
+	 </xs:simpleType>
+	 
+	 <xs:complexType name="tipoBarney">
+	 	<xs:attribute name="bebidaDiaria" type="Diaria"/>
+	 	<xs:attribute name="bebidaFavorita"/>
+	 </xs:complexType>
+	 
+	 <xs:simpleType name="Diaria">
+	 	<xs:restriction>
+	 		<xs:enumeration value="CocaCola"/>
+	 		<xs:enumeration value="FantaNaraja"/>
+	 		<xs:enumeration value="FantaLimon"/>
+	 		<xs:enumeration value="Nestea"/>
+	 	</xs:restriction>
+	 </xs:simpleType>
+
+</xs:schema>
