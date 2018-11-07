@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rocket xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ejercicio2.xsd">
+
+	<equipo nombre="ESP"/>
+	
+	<coche> Este es mi coche:
+		<dominus/>
+	</coche>
+	
+	<campo porterias="2" nombre="picha"/>
+
+</rocket>

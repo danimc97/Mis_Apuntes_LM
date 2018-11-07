@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="rocket" type="tipoRocket"/>
+	
+	<xs:complexType name="tipoRocket">
+		<xs:sequence>
+			<xs:element name="equipo" type="tipoEquipo"/>
+			<xs:element name="coche" type="tipoCoche"/>
+			<xs:element name="campo" type="tipoCampo"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	
+	
+	
+	
+	<xs:complexType name="tipoEquipo" mixed="true">
+		<xs:attribute name="nombre" type="xs:string"/>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoCoche" mixed="true">
+		<xs:sequence>
+			<xs:element name="dominus"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoCampo">
+		<xs:attribute name="porterias" type="xs:integer"/>
+		<xs:attribute name="nombre" type="xs:string"/>
+	</xs:complexType>
+
+</xs:schema>
