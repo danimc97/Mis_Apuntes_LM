@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<starwars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="starwars.xsd">
+
+	<galaxia constelacion="pulgarcito">1</galaxia>
+	
+	
+	<estrellaMuerte color="negro">Las partes son:
+	<!--  	<hangar/>-->
+		<cañones calibre="grande" codigo="3">holita</cañones>
+	</estrellaMuerte>
+	
+	<precioNave precio="500"/>
+
+</starwars>

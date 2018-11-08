@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="starwars" type="tipoStarwars"/>
+	
+	<xs:complexType name="tipoStarwars">
+		<xs:sequence>
+		
+			<xs:element name="galaxia" type="tipoGalaxia"/>
+			<xs:element name="estrellaMuerte" type="tipoEstrella"/>
+			<xs:element name="precioNave" type="tipoPrecio"/>
+		
+		</xs:sequence>
+	</xs:complexType>
+	
+	
+	
+	
+	
+	
+	
+	<xs:complexType name="tipoEstrella" mixed="true">
+		<xs:choice>
+			<xs:element name="hangar"/>
+			<xs:element name="cañones" type="tipoCañones"/>
+		</xs:choice>
+		<xs:attribute name="color" type="tipoColor"/>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoCañones" mixed="true">
+		<xs:attribute name="calibre" type="xs:string"/>
+		<xs:attribute name="codigo" type="xs:integer"/>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoGalaxia">
+		<xs:simpleContent>
+			<xs:extension base="xs:integer">
+				<xs:attribute name="constelacion" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	
+	<xs:simpleType name="tipoColor">
+		<xs:list itemType="listaColor"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="listaColor">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="negro"/>
+			<xs:pattern value="gris"/>
+			<xs:pattern value="blanco"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="tipoPrecio">
+		<xs:attribute name="precio" type="tipoIntervalo"/>
+	</xs:complexType>	
+
+	<xs:simpleType name="tipoIntervalo">
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="500"></xs:minInclusive>
+			<xs:maxInclusive value="700"></xs:maxInclusive>
+		</xs:restriction>
+	</xs:simpleType>
+	
+
+</xs:schema>
