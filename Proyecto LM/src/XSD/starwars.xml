@@ -10,5 +10,12 @@
 	</estrellaMuerte>
 	
 	<precioNave precio="500"/>
+	
+	<codigoDroide numeroIdentificacion="123456789F"/>
+	<matriculaNave numeroMatricula="ABC1234"/>
+	<macOrdenador numeroMac="14:e3:a5:34:87:ef"/>
+	<colorNave colorDeNave="blanco"/>
+	<rivales>Imperio</rivales>
+	<amigos>Imperio Rebeldes</amigos>
 
 </starwars>

@@ -9,6 +9,13 @@
 			<xs:element name="galaxia" type="tipoGalaxia"/>
 			<xs:element name="estrellaMuerte" type="tipoEstrella"/>
 			<xs:element name="precioNave" type="tipoPrecio"/>
+			<xs:element name="codigoDroide" type="tipoDroide"/>
+			<xs:element name="matriculaNave" type="tipoMatricula"/>
+			<xs:element name="macOrdenador" type="tipoMac"/>
+			<xs:element name="colorNave" type="tipoColorNave"/>
+			<xs:element name="rivales" type="tipoRivales"/>
+			<xs:element name="amigos" type="tipoAmigos"/>
+			
 		
 		</xs:sequence>
 	</xs:complexType>
@@ -63,5 +70,64 @@
 		</xs:restriction>
 	</xs:simpleType>
 	
+	<xs:complexType name="tipoDroide">
+		<xs:attribute name="numeroIdentificacion" type="tipoDNI"/>
+	</xs:complexType>
+	
+	<xs:simpleType name="tipoDNI">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{9}[A-Z]"></xs:pattern>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:complexType name="tipoMatricula">
+		<xs:attribute name="numeroMatricula">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="[A-Z]{3}\d{4}"></xs:pattern>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoMac">
+		<xs:attribute name="numeroMac">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="([0-9|A-F|a-f]{2}:){5}[0-9|A-F|a-f]{2}"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:complexType name="tipoColorNave">
+		<xs:attribute name="colorDeNave">
+			<xs:simpleType>
+				<xs:restriction base="xs:string">
+					<xs:pattern value="(blanco)|(gris)|(negro)"></xs:pattern>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	
+	<xs:simpleType name="tipoRivales">
+		<xs:union memberTypes="tipoImperio tipoRebeldes"/>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoRebeldes">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Rebeldes"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
 
+	<xs:simpleType name="tipoImperio">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Imperio"></xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<xs:simpleType name="tipoAmigos">
+		<xs:list itemType="tipoRivales"/>
+	</xs:simpleType>
+	
 </xs:schema>
