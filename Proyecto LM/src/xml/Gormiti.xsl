@@ -8,38 +8,45 @@
 		<html>
 		
 			<head>
-				<title>Gormiti</title>
+				<title>Tanques</title>
 			</head>
 			
 			<body>
 			
-				<table border="1">
-					<tr>
+				<table style="text-align:center;">
+					<tr style="background:#779cd8;">
 						<th></th>
 						<th>Gormiti</th>
 						<th>Tribu</th>
 					</tr>
-						<xsl:for-each select="gormiti">
-							<xsl:call-template name="TablaGormitis">
-								<xsl:with-param name="jugador"><xsl:value-of select="@jugador"/></xsl:with-param>
-							</xsl:call-template>
-						</xsl:for-each>
+					<xsl:for-each select="gormiti">
+						<xsl:choose>
+							<xsl:when test="position() mod 2 = 1">
+								<xsl:call-template name="filaEnTablasJugadasDescritas">
+									<xsl:with-param name="color">#7ba8f2</xsl:with-param>
+								</xsl:call-template>
+							</xsl:when>
+							<xsl:otherwise>
+								<xsl:call-template name="filaEnTablasJugadasDescritas">
+									<xsl:with-param name="color">#ffffff</xsl:with-param>
+								</xsl:call-template>
+							</xsl:otherwise>
+						</xsl:choose>
+					</xsl:for-each>
 				</table>
 			</body>
-		
 		</html>
-		
 	</xsl:template>
 	
 	
-	<xsl:template name="TablaGormitis">
-	  	<xsl:param name="jugador"/>
-	  	<tr>
-	  		<td><xsl:value-of select="position()"/></td>
-	  		<td><img src="{http://webdidacticarafaelmunoz.appspot.com/lmsgi/ejercicios-cap5/examen/2014-enero/gormitis/volcan.png[@gormiti=$gormiti]}"/></td>
-	  		<td><xsl:value-of select="@tribu"/></td>
-	  	</tr>
-  </xsl:template>
-	
-	
+	<xsl:template name="filaEnTablasJugadasDescritas">
+		<xsl:param name="color">
+			<tr>
+				<xsl:attribute name="bgcolor"><xsl:value-of select="$color"/></xsl:attribute>
+				<td><xsl:value-of select="position()"></xsl:value-of></td>			
+				<td></td>
+				<td><xsl:value-of select="@tribu"></xsl:value-of></td>
+			</tr>
+		</xsl:param>
+	</xsl:template>	
 </xsl:stylesheet>
