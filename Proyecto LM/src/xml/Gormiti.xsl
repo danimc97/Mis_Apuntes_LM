@@ -8,7 +8,7 @@
 		<html>
 		
 			<head>
-				<title>Tanques</title>
+				<title>Gormiti</title>
 			</head>
 			
 			<body>
@@ -34,19 +34,36 @@
 						</xsl:choose>
 					</xsl:for-each>
 				</table>
+				
+				<table border="1" width="800px" height="400px" style="background: url('http://webdidacticarafaelmunoz.appspot.com/lmsgi/ejercicios-cap5/examen/2014-enero/gormitis/islagorm.jpg') no-repeat;background-size:100% 100%;">
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</table>				
 			</body>
 		</html>
 	</xsl:template>
 	
 	
 	<xsl:template name="filaEnTablasJugadasDescritas">
-		<xsl:param name="color">
-			<tr>
-				<xsl:attribute name="bgcolor"><xsl:value-of select="$color"/></xsl:attribute>
-				<td><xsl:value-of select="position()"></xsl:value-of></td>			
-				<td></td>
-				<td><xsl:value-of select="@tribu"></xsl:value-of></td>
-			</tr>
-		</xsl:param>
+		<xsl:param name="color"/>
+		<tr>
+			<xsl:attribute name="bgcolor"><xsl:value-of select="$color"/></xsl:attribute>
+			<td><xsl:value-of select="position()"></xsl:value-of></td>			
+			<td><img src="{.}"/></td>
+			<td><xsl:value-of select="@tribu"></xsl:value-of></td>
+		</tr>
 	</xsl:template>	
 </xsl:stylesheet>
