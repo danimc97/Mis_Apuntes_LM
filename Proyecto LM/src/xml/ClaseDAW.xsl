@@ -441,21 +441,33 @@
         <td>
             <xsl:for-each select="estructuraAula/bloque">
                 <xsl:if test="($x = @x) and ($y = @y)">
-                	<xsl:choose>
-						<xsl:when test="@tipo = puerta">
+                    <xsl:choose>
+						<xsl:when test="@tipo = 'puerta'">
 							<xsl:attribute name="bgcolor">#ff543a</xsl:attribute>
 						</xsl:when>
-						<xsl:when test="@tipo = pared">
+						<xsl:when test="@tipo = 'pared'">
 							<xsl:attribute name="bgcolor">#fccf53</xsl:attribute>
 						</xsl:when>
-						<xsl:when test="@tipo = ventana">
+						<xsl:when test="@tipo = 'ventana'">
 							<xsl:attribute name="bgcolor">#bfd7ff</xsl:attribute>
 						</xsl:when>
 					</xsl:choose>
                     <xsl:value-of select="@tipo"/>
+                    <xsl:call-template name="imagen">
+                        <xsl:with-param name="alumno"><xsl:value-of select="../../alumnado/alumno/@sexo"/></xsl:with-param>
+                    </xsl:call-template>
                 </xsl:if>
             </xsl:for-each>
         </td>
+    </xsl:template>
+    
+    <xsl:template name="imagen">
+        <xsl:param name="alumno"/>
+        <xsl:for-each select="/primerDia1DAW/alumnado/alumno">
+            <xsl:if test="@sexo = $tribu">
+                <img src="{.}" width="150px"/>
+            </xsl:if>
+        </xsl:for-each>
     </xsl:template>
 	
 </xsl:stylesheet>
