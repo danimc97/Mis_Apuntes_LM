@@ -7,13 +7,9 @@
 	<xsl:template match="/primerDia1DAW">
 		
 		<html>
-		
 			<head>
-			
-			
 			</head>
 			<body>
-			
 			<table border="1">
 				<xsl:for-each select="horario/dia">
 					<tr>
@@ -24,7 +20,6 @@
 					</tr>
 				</xsl:for-each>
 			</table>
-			
 			<table border="1">
 				<tr>
 					<xsl:call-template name="celda">
@@ -453,21 +448,34 @@
 						</xsl:when>
 					</xsl:choose>
                     <xsl:value-of select="@tipo"/>
-                    <xsl:call-template name="imagen">
-                        <xsl:with-param name="alumno"><xsl:value-of select="../../alumnado/alumno/@sexo"/></xsl:with-param>
-                    </xsl:call-template>
                 </xsl:if>
             </xsl:for-each>
+            
+           <xsl:for-each select="alumnado/alumno">
+            	<xsl:if test="($x = @x) and ($y = @y)">
+            		<xsl:choose>
+						<xsl:when test="@sexo = 'H'">
+							<xsl:attribute name="style">background:#baffc5;</xsl:attribute>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:attribute name="style">background:#fffbd3;</xsl:attribute>
+						</xsl:otherwise>
+					</xsl:choose>
+					
+					<img width="30px">
+					<xsl:choose>
+						<xsl:when test="@sexo = 'H'">
+							<xsl:attribute name="src"><xsl:value-of select="../imagen[@sexo='H']"/></xsl:attribute>
+						</xsl:when>
+						<xsl:otherwise>
+							<xsl:attribute name="src"><xsl:value-of select="../imagen[@sexo='M']"/></xsl:attribute>
+						</xsl:otherwise>
+					</xsl:choose>
+					</img>
+					<xsl:value-of select="."/>
+            	</xsl:if>
+            </xsl:for-each>
+            
         </td>
     </xsl:template>
-    
-    <xsl:template name="imagen">
-        <xsl:param name="alumno"/>
-        <xsl:for-each select="/primerDia1DAW/alumnado/alumno">
-            <xsl:if test="@sexo = $tribu">
-                <img src="{.}" width="150px"/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:template>
-	
 </xsl:stylesheet>
