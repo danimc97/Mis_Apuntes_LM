@@ -24,7 +24,9 @@
 			<hora orden="3">ENT DES</hora>
 			<hora orden="6">PROG</hora>
 			<hora orden="4">FOL</hora>
-			<hora orden="2">BBDD</hora>
+			<hora orden="2">BBDD</hora>Error occurred during initialization of boot layer
+java.lang.LayerInstantiationException: Package jdk.internal.jimage.decompressor in both module jrt.fs and module java.base
+			
 			<hora orden="5">PROG</hora>
 		</dia>	
 		<dia desc="Jueves">
