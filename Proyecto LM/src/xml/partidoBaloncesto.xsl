@@ -368,7 +368,7 @@
   			<xsl:with-param name="j"><xsl:value-of select="$j + 1"/></xsl:with-param>
   		</xsl:call-template>
   	</xsl:if>
-  </xsl:template>>
+  </xsl:template>
 
 
   <xsl:template name="celda">
